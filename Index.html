@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Febrian-Tech | Solusi Digital Terpercaya</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        utama: '#0f172a', /* Slate 900 */
+                        aksen: '#3b82f6', /* Blue 500 */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-utama text-white p-4 fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold tracking-wider text-aksen">Febrian<span class="text-white"> Tech</span></h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-aksen transition">Home</a></li>
+                <li><a href="#layanan" class="hover:text-aksen transition">Layanan</a></li>
+                <li><a href="#pesan" class="bg-aksen px-4 py-2 rounded-lg hover:bg-blue-600 transition">Pesan Sekarang</a></li>
+            </ul>
+            <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 px-6 text-center bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">Solusi Teknologi Masa Depan</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                Kami membantu bisnis Anda berkembang dengan layanan IT profesional. 
+                Dari pembuatan website hingga perbaikan sistem.
+            </p>
+            <a href="#layanan" class="border border-aksen text-aksen hover:bg-aksen hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition duration-300">
+                Lihat Layanan Kami
+            </a>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h3 class="text-3xl font-bold text-center text-utama mb-12">Layanan Unggulan</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition border-t-4 border-aksen group">
+                    <div class="text-4xl text-aksen mb-4 group-hover:scale-110 transition transform duration-300">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Web Development</h4>
+                    <p class="text-gray-600">Pembuatan website responsif, landing page, dan sistem informasi berbasis web.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition border-t-4 border-aksen group">
+                    <div class="text-4xl text-aksen mb-4 group-hover:scale-110 transition transform duration-300">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Service & Maintenance</h4>
+                    <p class="text-gray-600">Perbaikan perangkat lunak, instalasi ulang, dan pemeliharaan sistem laptop/PC.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition border-t-4 border-aksen group">
+                    <div class="text-4xl text-aksen mb-4 group-hover:scale-110 transition transform duration-300">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Instalasi Jaringan</h4>
+                    <p class="text-gray-600">Pemasangan WiFi, konfigurasi router, dan setup jaringan lokal (LAN) kantor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pesan" class="py-20 px-6 bg-gray-100">
+        <div class="container mx-auto max-w-2xl bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-bold text-utama">Hubungi Kami</h3>
+                <p class="text-gray-500 mt-2">Isi form di bawah, pesanan akan langsung masuk ke WhatsApp kami.</p>
+            </div>
+
+            <form id="waForm" class="space-y-6">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Nama Anda</label>
+                    <input type="text" id="nama" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-aksen" placeholder="Contoh: Budi Santoso" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Pilih Layanan</label>
+                    <select id="layananInput" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-aksen">
+                        <option value="Web Development">Jasa Pembuatan Website</option>
+                        <option value="Service Laptop/PC">Service Laptop/PC</option>
+                        <option value="Instalasi Jaringan">Instalasi Jaringan</option>
+                        <option value="Konsultasi Lainnya">Konsultasi Lainnya</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Pesan Tambahan</label>
+                    <textarea id="pesanInput" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-aksen" placeholder="Jelaskan kebutuhan detail Anda..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-lg transition duration-300 flex justify-center items-center gap-2">
+                    <i class="fab fa-whatsapp text-2xl"></i> Kirim ke WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-utama text-gray-400 py-8 text-center">
+        <p>&copy; 2025 Febrian-Tech. All Rights Reserved.</p>
+        <div class="mt-4 space-x-4">
+            <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-github"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
